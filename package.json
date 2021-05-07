@@ -1,0 +1,6 @@
+{
+  "name": "leet-code",
+  "scripts": {
+    "avl": "tsc AVLTree.ts && node AVLTree.js"
+  }
+}
