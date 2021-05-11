@@ -1,6 +1,7 @@
 {
   "name": "leet-code",
   "scripts": {
-    "avl": "tsc AVLTree.ts && node AVLTree.js"
+    "avl": "tsc AVLTree.ts && node AVLTree.js",
+    "rbt": "tsc RBTree.ts && node RBTree.js"
   }
 }

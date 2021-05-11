@@ -245,6 +245,7 @@ class AVLTree implements AVLTreeImpl {
     public remove(value: number) {
         this.root = this.removeNode(this.root, value);
     }
+    
     /**
      * 删除节点辅助函数
      * */
@@ -253,7 +254,7 @@ class AVLTree implements AVLTreeImpl {
             node.right = this.removeNode(node.right, target);
         } else if (target < node.value && node.left) {
             node.left = this.removeNode(node.left, target);
-        } else if(target === node.value) {
+        } else if (target === node.value) {
             let curNode = node;
             
             // 目标节点是叶子节点，无左右子节点，直接删除
@@ -261,21 +262,21 @@ class AVLTree implements AVLTreeImpl {
                 curNode = null;
                 return curNode;
             }
-    
+            
             // 目标节点有左节点，无右节点
             if (curNode.left && !curNode.right) {
                 curNode.value = curNode.left.value;
                 curNode.left = null;
                 return curNode;
             }
-    
+            
             // 目标节点有右节点，无左节点
             if (!curNode.left && curNode.right) {
                 curNode.value = curNode.right.value;
                 curNode.right = null;
                 return curNode;
             }
-    
+            
             /**
              * 目标节点处于中间位置，存在左子节点也存在右子节点
              * 可以有以下两种处理方式：
